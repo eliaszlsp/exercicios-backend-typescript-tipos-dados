@@ -1,4 +1,4 @@
-const criarTabuada = (numeros: number[]) => {
+const criarTabuada = (numeros: number[]): string => {
   let tabuada: string = "";
 
   for (const numero of numeros) {

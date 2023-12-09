@@ -37,7 +37,7 @@ export const usuarios = [
   },
 ];
 
-const filtrarUsuarios = (usuarios: Usuarios[], nome: string) => {
+const filtrarUsuarios = (usuarios: Usuarios[], nome: string): Usuarios[] => {
   const nomeDono = usuarios.filter((dono) =>
     dono.nome.toLowerCase().includes(nome.toLowerCase())
   );

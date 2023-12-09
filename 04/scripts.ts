@@ -7,11 +7,13 @@ interface Etiqueta {
   qtd: number;
 }
 
-const criarEtiqueta = (produto: Etiqueta) => {
+const criarEtiqueta = (produto: Etiqueta): string[] => {
   let etiqueta: string[] = [];
 
   for (let index = 1; index <= produto.qtd; index++) {
-    etiqueta.push(`${produto.lote} ${produto.ano}  00${index}`);
+    etiqueta.push(
+      `${produto.lote} ${produto.ano}  ${index.toString().padStart(3, "0")}`
+    );
   }
 
   return etiqueta;
