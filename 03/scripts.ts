@@ -1,17 +1,15 @@
 const criarTabuada = (numeros: number[]) => {
-  const tabuada = [];
+  let tabuada: string = "";
 
-  for (let index = 0; index < 11; index++) {
-    const element = numeros[index];
-    tabuada.push(`${element} x ${index}=${element * index}`);
-
-    if (index === 10) {
-      tabuada.join(" ");
-      tabuada.push("----------");
+  for (const numero of numeros) {
+    for (let i = 0; i < 11; i++) {
+      tabuada += `${numero} x ${i} = ${numero * i} \n`;
     }
+
+    tabuada += "----------------------- \n";
   }
 
   return tabuada;
 };
 
-console.log(criarTabuada([1, 5, 2]));
+console.log(criarTabuada([1, 5, 2, 5]));
